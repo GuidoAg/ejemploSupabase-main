@@ -1,10 +1,9 @@
+// src/app/services/user.service.ts
 import { Injectable } from '@angular/core';
-import { createClient } from '@supabase/supabase-js';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { UserData } from '../models/user-data';
-
-const supabase = createClient(environment.apiUrl, environment.publicAnonKey);
+import { supabase } from '../supabase-client'; // ✅ nuevo import
 
 @Injectable({
   providedIn: 'root'

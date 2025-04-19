@@ -1,10 +1,8 @@
+// src/app/pages/login/login.component.ts
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { createClient } from '@supabase/supabase-js'
-import { environment } from '../../../environments/environment';
-
-const supabase = createClient(environment.apiUrl, environment.publicAnonKey)
+import { supabase } from '../../supabase-client'; // ✅ nuevo import
 
 @Component({
   standalone: true,
@@ -18,10 +16,7 @@ export class LoginComponent {
   username: string = "";
   password: string = "";
 
-  constructor(private router: Router) {
-  
-  }
-
+  constructor(private router: Router) {}
 
   login() {
     supabase.auth.signInWithPassword({
@@ -34,7 +29,5 @@ export class LoginComponent {
         this.router.navigate(['/home']);
       }
     });
-
   }
-
 }
