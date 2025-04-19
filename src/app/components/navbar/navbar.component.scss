@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  :host {
+    display: block;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f6fa;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e272e;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .nav-buttons button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .nav-buttons button:hover {
+    color: #00cec9;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  

@@ -1,0 +1,26 @@
+
+
+main {
+    background-color: #af95f1;
+    padding: 20px;
+    min-height: calc(100vh - 60px); 
+  }
+
+  .quiensoy-container {
+    
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .guido-img {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+  }

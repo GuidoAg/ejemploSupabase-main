@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="nav-buttons">
+      <button (click)="navigate('home')">Inicio</button>
+      <button (click)="navigate('usuario')">Usuario</button>
+      <button (click)="navigate('quien-soy')">Quién Soy</button>
+      <button (click)="navigate('juegos')">Juegos</button>
+    </div>
+  
+    @if (userData$ | async; as user) {
+      <div class="user-info">
+        <img [src]="getAvatarUrl(user.avatarUrl)" alt="Foto de perfil" class="profile-pic" />
+        <span class="username">{{ user.name }}</span>
+      </div>
+    }
+  </nav>
+  
